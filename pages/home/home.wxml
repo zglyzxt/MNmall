@@ -1,3 +1,10 @@
 <!--pages/home/home.wxml-->
-<text>pages/home/home.wxml</text>
-<view>1.知识点1</view>
+<!-- 1.小程序的数据绑定:{{}} mustache -->
+<view>hello {{name}}</view>
+<view>hello {{age}}</view>
+<!-- 2.列表 wx:for  -->
+<view wx:for="{{person}}" wx:key="{{item}}">{{item.name}}++{{item.age}}</view>
+
+<!-- 3.事件监听 -->
+<view>计数:{{count}}</view>
+<button size='mini' bindtap='handleBtnClick'>button</button>

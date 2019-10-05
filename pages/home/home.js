@@ -5,9 +5,24 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    name: 'Code',
+    age: 12,
+    person:[
+      {name:'lily',age:19},
+      {name:'harry',age:22},
+      {name:'luna',age:27},
+      {name:'max',age:19}
+    ],
+    count:0
   },
-
+  handleBtnClick(){
+    //界面数据没有更新,是错误的做法
+    // this.data.count+=1
+    //this.setData可以改变
+    this.setData({
+      count: this.data.count+1
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
